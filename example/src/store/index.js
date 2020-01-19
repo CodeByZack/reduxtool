@@ -1,4 +1,4 @@
-import { createStore, combineReducers } from 'redux';
+import { createStore } from 'redux';
 import ReduxTool from '../../../dist/reduxtool';
 const page = {
   state : {
@@ -50,7 +50,7 @@ const model = {
 };
 
 // 传递给createStore函数 这个export
-const store = createStore((ReduxTool.createReducer(model)));
+const store = createStore(ReduxTool.createReducer(model));
 ReduxTool.ejectDispatch(store.dispatch);
 export default store;
 
