@@ -1,6 +1,8 @@
 ## ReduxTool
 
-简化redux的模版代码。侵入性小。可正常使用所有中间件。
+简化redux的模版代码。对比rematch，无侵入性。可正常使用所有中间件。
+使用见 example 文件夹。 
+或者参考该项目 https://github.com/CodeByZack/react_movie/tree/reduxtool
 
 ### Getting Started
 
@@ -50,7 +52,8 @@ const models = {
 //createReducer的结果为reducer
 const store = createStore(ReduxTool.createReducer(models));
 //给dispatch注入方法，没有找到更好的办法😢
-ReduxTool.ejectDispatch(store.dispatch);
+//注入store，是为了effects执行时，获取当前state。
+ReduxTool.ejectDispatch(store);
 export default store;
 ```
 
