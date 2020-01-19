@@ -60,4 +60,17 @@ export default store;
   store.dispatch.list.changeList([1,2,2,2,2,2]);
 
   store.dispatch.page.changeTitleAsync("这是一条异步的title");
+
+
+  // 当你和redux-react一起使用时
+  const mapDispatch = dispatch => ({
+      increment: () => dispatch.page.changeTitleAsync(),
+  })
+  // 或者使用解构
+  const mapDispatchWithDestructure = ({ page: { changeTitleAsync } }) => {
+    return {
+      changeTitleAsync
+    }
+  }
+
 ```
