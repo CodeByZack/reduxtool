@@ -4,7 +4,8 @@
   "description": "simplelify the redux",
   "main": "dist/reduxtool.js",
   "scripts": {
-    "build": "webpack"
+    "build": "webpack",
+    "pr": "prettier src/**/*.js --write"
   },
   "author": "zackdk",
   "license": "ISC",
@@ -17,5 +18,11 @@
     "typescript": "^3.7.5",
     "webpack": "^4.41.5",
     "webpack-cli": "^3.3.10"
+  },
+  "prettier":{
+    "trailingComma": "es5",
+    "tabWidth": 2,
+    "semi": true,
+    "singleQuote": true
   }
 }
