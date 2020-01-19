@@ -29,20 +29,26 @@ const createReducer = models => {
   };
 };
 
-const ejectDispatch = (dispatch, models) => {
+const ejectDispatch = (store, models) => {
+  const { dispatch, getState } = store;
   const nameSpaces = Object.keys(models);
   for (let index = 0; index < nameSpaces.length; index++) {
     const nameSpace = nameSpaces[index];
     const model = models[nameSpace];
     //把所有方法注入dispatch
-    //为所有effect绑定this
-    dispatch[nameSpace] = { ...models.effects };
+    //为所有effect绑定this,注入当前state
+    model.effects = model.effects ? model.effects : {};
+    dispatch[nameSpace] = {};
     const modelEffectKeys = Object.keys(model.effects);
     for (let index = 0; index < modelEffectKeys.length; index++) {
       const effectKey = modelEffectKeys[index];
-      dispatch[nameSpace][effectKey] = model.effects[effectKey].bind(
-        dispatch[nameSpace]
-      );
+      dispatch[nameSpace][effectKey] = (args)=>{
+        model.effects[effectKey].call(
+          dispatch[nameSpace],
+          args,
+          getState()
+        );
+      } 
     }
     //替换所有reducer方法
     const modelReducerKeys = Object.keys(model.reducers);
@@ -53,6 +59,7 @@ const ejectDispatch = (dispatch, models) => {
         dispatch({ type, payload });
     }
   }
+  console.dir(dispatch);
   return dispatch;
 };
 
