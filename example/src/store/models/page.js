@@ -17,7 +17,7 @@ export default {
     },
   },
   effects: {
-    async changeTitleAsync(payload, rootState) {
+    async changeTitleAsync(payload) {
       await new Promise(resolve => setTimeout(resolve, 1000))
       this.changeTitle(payload)
     }

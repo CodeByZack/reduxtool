@@ -1,4 +1,4 @@
-export const createReducer = models => {
+const createReducer = models => {
   const finalReducer = {};
   const defaultState = {};
   const nameSpaces = Object.keys(models);
@@ -29,7 +29,7 @@ export const createReducer = models => {
   };
 };
 
-export const ejectDispatch = (dispatch, models) => {
+const ejectDispatch = (dispatch, models) => {
   const nameSpaces = Object.keys(models);
   for (let index = 0; index < nameSpaces.length; index++) {
     const nameSpace = nameSpaces[index];
