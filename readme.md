@@ -1,6 +1,6 @@
 ## ReduxTool
 
-简化redux的末班代码。侵入性小。可正常使用所有中间件。
+简化redux的模版代码。侵入性小。可正常使用所有中间件。
 
 ### Getting Started
 
@@ -47,8 +47,9 @@ import list from "./models/list";
 const models = {
   page,list
 };
-// 传递给createStore函数 这个export
+//createReducer的结果为reducer
 const store = createStore(ReduxTool.createReducer(models));
+//给dispatch注入方法，没有找到更好的办法😢
 ReduxTool.ejectDispatch(store.dispatch);
 export default store;
 ```
