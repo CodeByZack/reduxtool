@@ -1,13 +1,12 @@
 {
-  "name": "nothing",
+  "name": "ReduxTool",
   "version": "1.0.0",
-  "description": "no thing",
-  "main": "dist/nothing.js",
+  "description": "simplelify the redux",
+  "main": "dist/ReduxTool.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack"
   },
-  "author": "",
+  "author": "zackdk",
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.8.3",
