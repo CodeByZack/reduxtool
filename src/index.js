@@ -55,7 +55,7 @@ export const ejectDispatch = (dispatch,models)=>{
 
 let _models = null;
 
-const ReduxTool = {
+const reduxtool = {
   createReducer : (models)=>{
     _models = models;
     return createReducer(_models);
@@ -73,4 +73,4 @@ const ReduxTool = {
   }
 } 
 
-export default ReduxTool;
+export default reduxtool;

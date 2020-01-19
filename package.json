@@ -1,8 +1,8 @@
 {
-  "name": "ReduxTool",
+  "name": "reduxtool",
   "version": "1.0.0",
   "description": "simplelify the redux",
-  "main": "dist/ReduxTool.js",
+  "main": "dist/reduxtool.js",
   "scripts": {
     "build": "webpack"
   },

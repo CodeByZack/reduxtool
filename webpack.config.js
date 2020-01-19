@@ -19,9 +19,9 @@ module.exports = {
     extensions:['js']
   },
   output: {
-    filename: 'ReduxTool.js',
+    filename: 'reduxtool.js',
     path: path.resolve(__dirname, 'dist'),
-    library: 'ReduxTool',
+    library: 'reduxtool',
     libraryTarget: 'umd'
   }
 };
