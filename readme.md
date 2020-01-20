@@ -45,6 +45,8 @@ export default {
 ```js
 import { createStore } from 'redux';
 import ReduxTool from '../../../dist/reduxtool';
+//或者
+//import ReduxTool from '@zackdk/reduxtool';
 import page from "./models/page";
 import list from "./models/list";
 
