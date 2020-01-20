@@ -6,7 +6,9 @@
 )
 ### Getting Started
 
-暂时未发布npm，可以先复制dist/reduxtool.js或者src/index.js到项目里。
+`npm install -S @zackdk/reduxtool`
+
+或者可以直接复制dist/reduxtool.js或者src/index.js到项目里。
 
 #### Step1 model
 
