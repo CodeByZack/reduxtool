@@ -1,5 +1,5 @@
 import { createStore } from 'redux';
-import ReduxTool from '../../../dist/reduxtool';
+import ReduxTool from '@zackdk/reduxtool';
 import page from "./models/page";
 import list from "./models/list";
 
