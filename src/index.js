@@ -23,7 +23,6 @@ const createReducer = models => {
       newState[modelName] = reducer(state[modelName], ...payload);
       return newState;
     } else {
-      console.log('未找到注册的Reducers');
       return newState;
     }
   };
@@ -59,7 +58,6 @@ const ejectDispatch = (store, models) => {
         dispatch({ type, payload });
     }
   }
-  console.dir(dispatch);
   return dispatch;
 };
 
@@ -70,16 +68,14 @@ const reduxtool = {
     _models = models;
     return createReducer(_models);
   },
-  ejectDispatch: dispatch => {
+  ejectDispatch: store => {
     if (!_models) {
-      console.log('请先调用ReduxTool.createReducer()注入models');
-      return;
+      throw("请先调用ReduxTool.createReducer()注入models")
     }
-    if (!dispatch) {
-      console.log('请传入redux/store的dispatch方法');
-      return;
+    if (!store) {
+      throw("请传入redux/store")
     }
-    ejectDispatch(dispatch, _models);
+    ejectDispatch(store, _models);
   },
 };
 
