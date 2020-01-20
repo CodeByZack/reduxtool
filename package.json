@@ -2,6 +2,11 @@
   "name": "@zackdk/reduxtool",
   "version": "1.0.1",
   "description": "simplelify the redux",
+  "keywords": [
+    "redux",
+    "action",
+    "reducer"
+  ],
   "main": "dist/reduxtool.js",
   "scripts": {
     "build": "webpack",
