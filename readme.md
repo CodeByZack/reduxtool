@@ -2,8 +2,8 @@
 
 简化redux的模版代码。对比rematch，无侵入性。可正常使用所有中间件。
 使用见 example 文件夹。 
-或者参考该项目 https://github.com/CodeByZack/react_movie/tree/reduxtool
-
+或者参考该项目 [风影院](https://github.com/CodeByZack/react_movie/tree/reduxtool
+)
 ### Getting Started
 
 暂时未发布npm，可以先复制dist/reduxtool.js或者src/index.js到项目里。
